@@ -17,7 +17,7 @@ export default function Signup() {
     e.preventDefault();
     try {
       await axios.post(
-        `${API_URL}/auth/register`,
+        `${API_URL}/api/auth/register`,
         form
       );
       navigate("/login");

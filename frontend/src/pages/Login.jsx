@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `${API_URL}/auth/login`/auth/login,
+        `${API_URL}/api/auth/login`,
         form
       );
       localStorage.setItem("token", res.data.token);
