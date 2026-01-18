@@ -11,16 +11,18 @@ export default function Signup() {
   });
 
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        `${API_URL}/auth/register`,
         form
       );
       navigate("/login");
     } catch (err) {
+      console.error(err.response?.data || err.message);
       alert("Signup failed");
     }
   };
