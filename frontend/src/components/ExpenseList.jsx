@@ -2,10 +2,11 @@ import axios from "axios";
 
 export default function ExpenseList({ expenses, onDelete }) {
   const token = localStorage.getItem("token");
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const remove = async (id) => {
     await axios.delete(
-      `http://localhost:5000/api/expenses/${id}`,
+      `${API_URL}/api/expenses/${id}`,
       { headers: { Authorization: `Bearer ${token}` } }
     );
     onDelete(id);

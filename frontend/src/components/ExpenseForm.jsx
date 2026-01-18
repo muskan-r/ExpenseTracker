@@ -4,11 +4,12 @@ import axios from 'axios';
 export default function ExpenseForm({ onAdd }) {
   const [form, setForm] = useState({ description: '', amount: '', category: '' });
   const token = localStorage.getItem('token');
+  const API_URL = import.meta.env.VITE_API_URL;
 
   const submit = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      'http://localhost:5000/api/expenses',
+      `${API_URL}/api/expenses`,
       form,
       { headers: { Authorization: `Bearer ${token}` } }
     );

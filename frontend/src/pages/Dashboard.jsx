@@ -12,6 +12,7 @@ export default function Dashboard() {
   const [expenses, setExpenses] = useState([]);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     if (!token) {
@@ -20,7 +21,7 @@ export default function Dashboard() {
     }
 
     axios
-      .get("http://localhost:5000/api/expenses", {
+      .get(`${API_URL}/api/expenses`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setExpenses(res.data))
