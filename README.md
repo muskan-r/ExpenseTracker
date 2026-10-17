@@ -1,4 +1,4 @@
-# 💰 Expense Management System
+# 💰 Expense Tracker Management System
 
 A MERN stack web application that helps users manage daily expenses, organize spending by category, set budgets, and monitor their finances through an interactive dashboard.
 
