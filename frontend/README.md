@@ -1,16 +1,105 @@
-# React + Vite
+# 💰 Expense Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A MERN stack web application that helps users manage daily expenses, organize spending by category, set budgets, and monitor their finances through an interactive dashboard.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (Signup and Login)
+- Add, update, delete, and view expenses
+- Manage expense categories
+- Set and update budgets
+- Dashboard for tracking expenses and budgets
+- Visual expense analysis using charts
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend:** React.js, Vite
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Language:** JavaScript
+- **Tools:** Git, GitHub, Visual Studio Code
 
-## Expanding the ESLint configuration
+## 📂 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+Expense-Tracker/
+├── backend/
+│   ├── config/
+│   │   └── Database.js
+│   ├── middleware/
+│   │   └── auth.js
+│   ├── models/
+│   │   ├── Expense.js
+│   │   └── User.js
+│   ├── routes/
+│   │   ├── auth.js
+│   │   └── expenses.js
+│   ├── .env
+│   ├── package.json
+│   └── server.js
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── ExpenseCharts.jsx
+│   │   │   ├── ExpenseForm.jsx
+│   │   │   ├── ExpenseList.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── pages/
+│   │   │   ├── Dashboard.jsx
+│   │   │   ├── Home.jsx
+│   │   │   ├── Login.jsx
+│   │   │   └── Signup.jsx
+│   │   ├── services/
+│   │   ├── App.jsx
+│   │   ├── App.css
+│   │   └── main.jsx
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md
+```
+
+## ⚙️ Installation and Setup
+
+**1. Clone the repository**
+
+```bash
+git clone YOUR_REPOSITORY_URL
+cd Expense-Tracker
+```
+
+**2. Install backend dependencies**
+
+```bash
+cd backend
+npm install
+```
+
+**3. Install frontend dependencies**
+
+Open a new terminal and run:
+
+```bash
+cd frontend
+npm install
+```
+
+**4. Configure environment variables**
+
+Add your MongoDB connection string and other required configuration values to the backend `.env` file. Configure frontend environment variables if required.
+
+**5. Run the application**
+
+Start the backend and frontend separately using the scripts defined in their respective `package.json` files.
+
+## 👩‍💻 Author
+
+**Muskan Gulati**  
+B.Tech Computer Science and Engineering Student
+
+GitHub: [Muskan Gulati](https://github.com/)
+

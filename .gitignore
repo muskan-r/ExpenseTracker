@@ -16,6 +16,7 @@ build
 .env
 backend/.env
 frontend/.env
+frontend/README.md
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
